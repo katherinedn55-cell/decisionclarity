@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Decision Clarity by Lumiel</title>
+    <meta name="description" content="Get in touch with the Decision Clarity team. We welcome conversations with funders, researchers, and civic technologists.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.jpeg" alt="Lumiel" class="nav-logo-img">
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <p class="hero-eyebrow">Contact</p>
+            <h1 class="page-hero-title">Let's talk.</h1>
+            <p class="page-hero-subtitle">Whether you're a funder, researcher, civic technologist, or someone who believes decision support should be accessible to all, we'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section section-contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-block">
+                        <h3>Email</h3>
+                        <a href="/cdn-cgi/l/email-protection#5a313b2e323f2833343f323b283e333469691a3d373b333674393537" class="contact-link"><span class="__cf_email__" data-cfemail="c1aaa0b5a9a4b3a8afa4a9a0b3a5a8aff2f281a6aca0a8adefa2aeac">[email&#160;protected]</span></a>
+                    </div>
+                    <div class="contact-block">
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/katherine-hardin-231b8b284/" target="_blank" rel="noopener" class="contact-link">Katherine Anne Hardin</a>
+                    </div>
+                    <div class="contact-block">
+                        <h3>We're especially interested in hearing from:</h3>
+                        <ul class="contact-list">
+                            <li>Funders and grant programs supporting civic technology</li>
+                            <li>Researchers in decision science, causal inference, or AI accountability</li>
+                            <li>Civic technologists and public interest developers</li>
+                            <li>Organizations that could benefit from better decision support tools</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contact-message">
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="48" height="48"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <h3>Send us an email</h3>
+                        <p>We read every message and respond personally. No chatbots, no form submissions into a void.</p>
+                        <a href="/cdn-cgi/l/email-protection#e68d87928e83948f88838e8794828f88d5d5a6818b878f8ac885898b" class="btn btn-primary">Email Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/logo.jpeg" alt="Lumiel" class="footer-logo">
+                    <p class="footer-tagline">Decision Clarity by Lumiel.<br>Illuminate information. Empower decisions.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Get in Touch</h4>
+                    <a href="/cdn-cgi/l/email-protection#3952584d515c4b50575c51584b5d50570a0a795e54585055175a5654"><span class="__cf_email__" data-cfemail="523933263a37203b3c373a3320363b3c616112353f333b3e7c313d3f">[email&#160;protected]</span></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lumiel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav toggle
+        const toggle = document.querySelector('.nav-toggle');
+        const links = document.querySelector('.nav-links');
+        toggle.addEventListener('click', () => {
+            links.classList.toggle('open');
+            toggle.classList.toggle('open');
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.contact-block, .contact-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
